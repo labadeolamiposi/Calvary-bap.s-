@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .column {
+    width: 100%; /* Stack columns vertically on phones */
+  }
+}
 
 html {
     scroll-behavior: smooth;

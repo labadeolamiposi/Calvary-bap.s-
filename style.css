@@ -1,0 +1,953 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 7%;
+
+    background: rgba(255,255,255,0.96);
+
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h2 {
+    font-size: 18px;
+    color: #073b8c;
+}
+
+.logo span {
+    color: #f2a900;
+    font-weight: bold;
+}
+
+.logo-circle {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #073b8c;
+    color: white;
+
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #172033;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f2a900;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(4,36,86,0.78),
+            rgba(4,36,86,0.78)
+        ),
+        url("images/school.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 100px 7% 60px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.welcome {
+    color: #f5bd32;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #f5bd32;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 25px auto;
+    font-size: 19px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 27px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #f2a900;
+    color: #111;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    background: #ffc43d;
+}
+
+.secondary-btn {
+    border: 2px solid white;
+    color: black;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #073b8c;
+}
+
+
+/* ================= QUICK INFO ================= */
+
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #073b8c;
+    color: white;
+}
+
+.info-card {
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.info-card i {
+    font-size: 30px;
+    color: #f5bd32;
+}
+
+.info-card h3 {
+    font-size: 17px;
+}
+
+.info-card p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+/* ================= GENERAL SECTION ================= */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    color: #f2a900;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.section-content h2,
+.contact h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span,
+.section-content h2 span,
+.contact h2 span {
+    color: #073b8c;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.section-image {
+    position: relative;
+}
+
+.section-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    /* margin-top: 40px; */
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -25px;
+    right: -20px;
+
+    background: #f2a900;
+    color: #111;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.experience-badge strong {
+    font-size: 35px;
+}
+
+.about-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.about-list div {
+    font-weight: bold;
+}
+
+.about-list i {
+    color: #f2a900;
+    margin-right: 8px;
+}
+
+
+/* ================= ACADEMICS ================= */
+
+.academics {
+    background: #f5f8fc;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+    padding: 35px 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card .icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf1ff;
+    color: #073b8c;
+
+    border-radius: 10px;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* ================= FACILITIES ================= */
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.facility-card {
+    overflow: hidden;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.facility-info {
+    padding: 25px;
+}
+
+.facility-info i {
+    color: #f2a900;
+    font-size: 25px;
+}
+
+.facility-info h3 {
+    margin: 8px 0;
+}
+
+
+/* ================= TEACHERS ================= */
+
+.teachers {
+    background: #073b8c;
+    color: white;
+    text-align: center;
+}
+
+.teachers .section-heading h2 {
+    color: white;
+}
+
+.teachers .section-heading h2 span {
+    color: #f2a900;
+}
+
+.teacher-message {
+    max-width: 800px;
+    margin: auto;
+}
+
+.teacher-message i {
+    color: #f2a900;
+    font-size: 40px;
+}
+
+.teacher-message p {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    background: #f7f9fc;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================= ADMISSION ================= */
+
+.admission {
+    background: #eef4ff;
+}
+
+.registration-container {
+    max-width: 900px;
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.registration-container h3 {
+    color: #073b8c;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d5dbe5;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #073b8c;
+}
+
+.parent-title {
+    margin-top: 25px;
+}
+
+.submit-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 15px;
+
+    background: #073b8c;
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #f2a900;
+    color: #111;
+}
+
+#formMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #0b172b;
+    color: white;
+    padding: 80px 7%;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact h2 span {
+    color: #f2a900;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-details div {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-details i {
+    color: #f2a900;
+    font-size: 22px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #06101f;
+    color: white;
+
+    padding: 35px 7%;
+
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #073b8c;
+
+    color: white;
+
+    border-radius: 50%;
+}
+
+.socials a:hover {
+    background: #f2a900;
+    color: #111;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+/* ================= BACK TO TOP ================= */
+
+#backToTop {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f2a900;
+    color: #111;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 999;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    .quick-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 12px 5%;
+    }
+
+    .logo h2 {
+        font-size: 15px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 75px;
+        left: -100%;
+
+        width: 100%;
+
+        background: white;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 25px;
+
+        transition: 0.3s;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .quick-info {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .section {
+        padding: 70px 5%;
+    }
+
+    .registration-container {
+        padding: 25px 18px;
+    }
+    button { font: inherit; }
+    /* SPLASH SCREEN */
+.splash-screen {
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #003b7a,
+            #0066b3,
+            #008fd5
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+/* When splash disappears */
+.splash-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* CONTENT */
+.splash-content {
+    text-align: center;
+    color: white;
+
+    width: 90%;
+    max-width: 650px;
+
+    animation: fadeUp 1.2s ease;
+}
+
+/* LOGO */
+.logo {
+    width: 145px;
+    height: 145px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 0 0 8px rgba(255, 255, 255, 0.1),
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    animation: logoPulse 2s infinite;
+}
+
+/* LOGO INSIDE */
+.logo-inner {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #004a8f;
+
+    font-size: 38px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+/* SCHOOL NAME */
+.splash-content h1 {
+    font-size: 38px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* MOTTO */
+.motto {
+    font-size: 18px;
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+/* LOCATION */
+.location {
+    font-size: 14px;
+
+    opacity: 0.85;
+
+    margin-bottom: 35px;
+}
+
+/* LOADER */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+}
+
+.loader span {
+    width: 11px;
+    height: 11px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    animation: loading 1.2s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* LOADING TEXT */
+.loading-text {
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    opacity: 0.8;
+}
+
+}
+
